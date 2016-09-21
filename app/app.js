@@ -12,19 +12,19 @@ app.set('view engine','handlebars');
 app.set('views', '${__dirname}/views/');
 
 //var articles = require('./controllers/articles');
-var signup = require('./controllers/signup');
-var signin = require('./controllers/sign-in');
-var search = require('./controllers/search');
-var create = require('./controllers/create');
+//var signup = require('./controllers/signup');
+//var signin = require('./controllers/sign-in');
+//var search = require('./controllers/search');
+//var create = require('./controllers/create');
 var account = require('./controllers/account');
 
 //  All urls with articles are handled bu articles
 //  use app."" here but router."" in router
 //app.use('/articles', articles);
-app.use('/signup', signup);
-app.use('/sign-in',signin);
-app.use('/search',search);
-app.use('/create', create);
+//app.use('/signup', signup);
+//app.use('/sign-in',signin);
+//app.use('/search',search);
+//app.use('/create', create);
 app.use('/account',account);
 
 //  Will have to change
