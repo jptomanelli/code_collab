@@ -1,6 +1,10 @@
 # Code_collab
 
 ## Instructions
+
+vagrant up
+vagrant ssh
+
 ### Install nvm
 sudo apt-get update
 sudo apt-get install build-essential libssl-dev curl
@@ -21,3 +25,17 @@ node -v
 
 ### Run node repl (read-eval-print loop)
 node
+
+### install nodemon
+npm install --save nodemon
+
+### chai
+npm install --save chai
+npm install --save chai-http
+npm install --save mocha
+
+### start the app
+npm start
+
+### view
+Go to 192.168.33.10:8000 to view the app
