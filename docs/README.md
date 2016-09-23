@@ -23,13 +23,14 @@ nvm ls
 ### check the node version
 node -v
 
-### Run node repl (read-eval-print loop)
-node
+### Go to shared dir
+
+cd /vagrant/app
 
 ### install nodemon
 npm install --save nodemon
 
-### chai
+### Install Test packages
 npm install --save chai
 npm install --save chai-http
 npm install --save mocha
