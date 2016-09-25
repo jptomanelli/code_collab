@@ -13,7 +13,7 @@ app.set('views', `${__dirname}/views/`);
 
 var post = require('./controllers/post');
 var signup = require('./controllers/signup');
-//var signin = require('./controllers/sign-in');
+var signin = require('./controllers/signin');
 //var browse = require('./controllers/browse');
 //var create = require('./controllers/create');
 var account = require('./controllers/account');
@@ -22,7 +22,7 @@ var account = require('./controllers/account');
 //  use app."" here but router."" in router
 app.use('/post', post);
 app.use('/signup', signup);
-//app.use('/sign-in',signin);
+app.use('/signin', signin);
 //app.use('/search',search);
 //app.use('/create', create);
 app.use('/account',account);
