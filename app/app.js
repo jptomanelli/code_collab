@@ -11,23 +11,24 @@ app.engine('handlebars', exphbs({
 app.set('view engine','handlebars');
 app.set('views', `${__dirname}/views/`);
 
+//  require all controllers
 var post = require('./controllers/post');
 var signup = require('./controllers/signup');
 var signin = require('./controllers/signin');
-//var browse = require('./controllers/browse');
-//var create = require('./controllers/create');
+var browse = require('./controllers/browse');
+var create = require('./controllers/create');
 var account = require('./controllers/account');
 
-//  All urls with articles are handled bu articles
-//  use app."" here but router."" in router
+//  Using those controllers
 app.use('/post', post);
 app.use('/signup', signup);
 app.use('/signin', signin);
-//app.use('/search',search);
-//app.use('/create', create);
+app.use('/browse',search);
+app.use('/create', create);
 app.use('/account',account);
 
 //  Will have to change
+//  Homepage should have it's own controller
 app.get('/', function(req,res) {
   res.send('Home Page');
 });
