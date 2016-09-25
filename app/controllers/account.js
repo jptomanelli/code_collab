@@ -5,7 +5,7 @@ var router = express.Router();
 
 //  need to send to views
 router.get('/', function(req,res){
-  res.send('Account Info...');
+  res.render('account');
 });
 
 

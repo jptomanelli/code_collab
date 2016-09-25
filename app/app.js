@@ -9,7 +9,7 @@ app.engine('handlebars', exphbs({
    defaultLayout: 'main'
 }));
 app.set('view engine','handlebars');
-app.set('views', '${__dirname}/views/');
+app.set('views', `${__dirname}/views/`);
 
 //var articles = require('./controllers/articles');
 //var signup = require('./controllers/signup');
