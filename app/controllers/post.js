@@ -1,4 +1,6 @@
 //  Post information
+//  This is for individual posts
+//  This page will need post data to fill
 
 var express = require('express');
 var router = express.Router();

@@ -1,4 +1,5 @@
-//  Signin information
+//  Signin controller
+//  Page where a user can sign in
 
 var express = require('express');
 var router = express.Router();

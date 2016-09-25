@@ -19,11 +19,11 @@ var browse = require('./controllers/browse');
 var create = require('./controllers/create');
 var account = require('./controllers/account');
 
-//  Using those controllers
+//  Using controllers
 app.use('/post', post);
 app.use('/signup', signup);
 app.use('/signin', signin);
-app.use('/browse',search);
+app.use('/browse', browse);
 app.use('/create', create);
 app.use('/account',account);
 

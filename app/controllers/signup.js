@@ -1,4 +1,5 @@
 //  Signup information
+//  User can sign up here
 
 var express = require('express');
 var router = express.Router();

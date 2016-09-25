@@ -1,4 +1,5 @@
-//  Account information
+//  Account Controller
+//  User will need to have an account to access this Page
 
 var express = require('express');
 var router = express.Router();
