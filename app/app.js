@@ -12,25 +12,25 @@ app.set('view engine','handlebars');
 app.set('views', `${__dirname}/views/`);
 
 //  require all controllers
+var homepage = require('./controllers/homepage')
 var post = require('./controllers/post');
 var signup = require('./controllers/signup');
-var signin = require('./controllers/signin');
+var login = require('./controllers/login');
 var browse = require('./controllers/browse');
 var create = require('./controllers/create');
 var account = require('./controllers/account');
 
 //  Using controllers
+app.use('/homepage', homepage);
 app.use('/post', post);
 app.use('/signup', signup);
-app.use('/signin', signin);
+app.use('/login', login);
 app.use('/browse', browse);
 app.use('/create', create);
 app.use('/account',account);
 
-//  Will have to change
-//  Homepage should have it's own controller
 app.get('/', function(req,res) {
-  res.send('Home Page');
+  res.render('homepage');
 });
 
 app.use(function(req, res, next) {
