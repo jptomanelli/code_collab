@@ -1,5 +1,6 @@
 var exphbs = require('express-handlebars');
 var express = require('express');
+var path = require('path');
 
 var app = express();
 
@@ -10,6 +11,8 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine','handlebars');
 app.set('views', `${__dirname}/views/`);
+
+app.use("/public", express.static(__dirname + '/public'));
 
 //  require all controllers
 var homepage = require('./controllers/homepage')
