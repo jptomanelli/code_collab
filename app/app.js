@@ -1,6 +1,7 @@
 var exphbs = require('express-handlebars');
 var express = require('express');
 var path = require('path');
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -9,6 +10,10 @@ app.engine('handlebars', exphbs({
    layoutsDir: './views/layouts',
    defaultLayout: 'main'
 }));
+
+app.use(bodyParser. urlencoded({ extended: true }));
+app.use(bodyParser. json());
+
 app.set('view engine','handlebars');
 app.set('views', `${__dirname}/views/`);
 
@@ -44,3 +49,4 @@ app.use(function(req, res, next) {
 
 module.exports = app;
 app.listen(8000);
+console.log("Server up on localhost:8000");
