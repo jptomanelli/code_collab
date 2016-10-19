@@ -27,13 +27,11 @@ node -v
 
 cd /vagrant/app
 
-### install nodemon
-npm install --save nodemon
+### Dep
 
-### Install Test packages
-npm install --save chai
-npm install --save chai-http
-npm install --save mocha
+npm install
+
+npm install -g sequelize-cli
 
 ### start the app
 npm start
