@@ -20,8 +20,10 @@ router.post('/', function(req, res) {
     password: req.body.password,
   }).then((User) => {
       res.redirect('/login')
-  }).catch(() => {
+  }).catch((e) => {
     res.redirect('/signup');
+    //  Error prints to console
+    console.log(e);
   });
 });
 
