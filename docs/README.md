@@ -33,8 +33,18 @@ npm install
 
 npm install -g sequelize-cli
 
+### Install postgres
+
+```
+$ sudo apt-get update
+$ sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 python-psycopg2
+$ sudo su - postgres
+# createuser -P -s -e pg_user
+# exit
+```
+
 ### start the app
 npm start
 
 ### view
-Go to 192.168.33.10:8000 to view the app
+Go to localhost:8000 to view the app
