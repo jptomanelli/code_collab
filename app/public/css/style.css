@@ -1,4 +1,48 @@
 
 body {
-  color: black;
+	color: black;
+}
+
+.column-left{
+	float: left;
+	width: 33%;
+}
+.column-right{
+	float: right;
+	width: 33%;
+}
+.column-center{
+	display: inline-block;
+	width: 33%;
+}
+
+body{
+	background-image:url(blur.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.login-fields{
+	width:300px;
+
+}
+
+.jumbotron{
+	padding-top: 100px;
+	padding-left: 10%;
+	background-color: #eeeeee80;
+}
+.form-group{
+	content: "<br>";
+		padding-right: 80%;
+}
+
+.container{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	color: white;
+	background-color: #87878790;
+	padding: 0;
+	margin: 0;
 }
