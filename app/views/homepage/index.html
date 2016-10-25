@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="scripts.js"></script>
         <!-- End of Scripts and Sheets -->
           
     </head>
@@ -18,14 +19,14 @@
     <!-- NavBar and Properties -->
     <div class ="navbar navbar-inverse navbar-fixed-top">
        
-       <form class="navbar-form navbar-left" role="login">
+       <form class="navbar-form navbar-left" name="login_info" id="login_info" role="login">
           <div class="form-group">
-            <input type="text" class="form-control" id="user_name" name="username" placeholder="Username">
+            <input type="text" class="form-control" onsubmit="return validateForm();" id="user_name" name="username" placeholder="Username" method="post" required>
           </div>
           <div class="form-group">
-            <input type="password" id="password" class="form-control" name="password" placeholder="Password">
+            <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
           </div> 
-          <button type="submit" class="btn btn-default">Login</button>
+          <button type="submit" onClick="validateForm()" class="btn btn-default">Login</button>
       </form>
 
 
@@ -38,6 +39,15 @@
     </div>
     <!-- End of Navbar -->
     
+
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Recent Projects</h1> 
+          <p>Recent projects shall go here!</p> 
+      </div>
+    </div>
+
   
 </body>
 
