@@ -1,0 +1,68 @@
+p {
+    color:white;
+    text-align: center;
+  
+}
+
+h2{
+    color:#FFFFFF;
+    text-align:center;
+}
+
+li{
+    color:#FFFFFF;
+}
+
+ul{
+    text-align:center;
+    display:table;
+    margin:0 auto;
+}
+
+body{
+   background-image:url(blur.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+
+#languages{
+   color:white;
+    size:20px;
+}
+
+#jumbotronn{
+    
+   margin-top: 200px;
+  
+}
+
+
+#project_form{
+
+}
+
+.label{
+  color:#ffffff;
+
+}
+
+.navbar{
+    margin:0px;
+    
+}
+
+h4{
+    color:#FFFFFF;
+    text-align: center;
+}
+
+hr {
+display: block;
+margin-before: 0.5em;
+margin-after: 0.5em;
+margin-start: 100;
+margin-end: 100;
+border-style: inset;
+border-width: 1px; 
+}
