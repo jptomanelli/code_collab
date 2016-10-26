@@ -2,17 +2,20 @@ var exphbs = require('express-handlebars');
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var passport = require('./middlewares/auth');
+
 
 var app = express();
 
-//handlebars
+//  handlebars
 app.engine('handlebars', exphbs({
    layoutsDir: './views/layouts',
    defaultLayout: 'main'
 }));
-
+//  Body Parser
 app.use(bodyParser. urlencoded({ extended: true }));
 app.use(bodyParser. json());
+
 
 app.set('view engine','handlebars');
 app.set('views', `${__dirname}/views/`);
