@@ -20,6 +20,7 @@ body{
 	background-image:url(blur.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+
 }
 
 .login-fields{
@@ -30,6 +31,7 @@ body{
 .jumbotron{
 	padding-top: 100px;
 	padding-left: 10%;
+	padding-right: 10%;
 	background-color: #eeeeee80;
 }
 .form-group{
@@ -41,8 +43,13 @@ body{
 	height:100%;
 	width:100%;
 	overflow:hidden;
-	color: white;
+	color: black;
 	background-color: #87878790;
 	padding: 0;
 	margin: 0;
+}
+
+footer{
+padding-left: 50%;
+	background-color: #ffffff90;
 }
