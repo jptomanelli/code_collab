@@ -9,12 +9,18 @@
   "author": "Francisco Perez, Kevin Geocos, Miguel Rodriguez, John Tomanelli",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.5",
     "mocha": "^3.0.2",
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.10.2",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "pg": "^6.1.0",
+    "sequelize": "^3.24.5"
   }
 }
