@@ -1,0 +1,105 @@
+<html>
+ <head>
+        <meta charset="utf-8">
+     <title>
+        </title>
+    
+        <!-- Scripts and Sheets -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="post.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="scripts.js"></script>
+        <!-- End of Scripts and Sheets -->
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+
+
+<body>
+<!-- NavBar and Properties -->
+    <div class ="navbar navbar-inverse navbar-fixed-top">
+
+
+        <!-- Searchbar -->
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search Projects">
+          </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+
+    </div>
+  <!-- END of Navbar -->
+
+
+
+
+
+
+ <!-- START of Form -->
+ <div id="entire_form">
+  <form class="form-horizontal" name="project_form" id="project_form">
+    <fieldset>
+
+<!-- Form Name -->
+    <legend>Project Information</legend>
+
+<!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" name="project_name" for="textinput">Project Name</label>  
+          <div class="col-md-8">
+              <input id="textinput" name="textinput" type="text" placeholder="What's it called?" class="form-control input-md" required="">
+    
+          </div>
+      </div>
+
+      <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" name="github_link"for="textinput">GitHub Link</label>  
+          <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" placeholder="Link your Repo here!" class="form-control input-md" required="">
+    
+          </div>
+      </div>
+
+                <!-- Select Multiple -->
+                <div class="form-group" >
+                    <label class="col-md-4 control-label" color="white" for="selectmultiple">Languages used</label>
+                  <div class="col-md-4">
+                    <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+                      <option value="1">C++</option>
+                      <option value="2">HTML</option>
+                      <option value="3">Javascript</option>
+                      <option value="4">Java</option>
+                      <option value="5">CSS</option>
+                      <option value="6">Objective C</option>
+                      <option value="7">Perl</option>
+                    </select>
+                  </div>
+                </div>
+
+    <!-- Textarea -->
+          <div class="form-group">
+              <label class="col-md-4 control-label" for="projectText">Project Description</label>
+            <div class="col-md-4">                     
+                <textarea class="form-control" id="projectText" name="projectText">Tell us about your project!</textarea>
+
+            </div>
+                <div class="col-md-4">
+                    <button type="submit" id="post_button" class="btn btn-default">Submit</button>
+                </div>
+
+          </div>
+
+
+
+        </fieldset>
+      </form>
+    </div>
+   
+   </body>
+<!-- END of Form -->
+
+</html>    
