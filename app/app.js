@@ -47,6 +47,7 @@ var login = require('./controllers/login');
 var browse = require('./controllers/browse');
 var create = require('./controllers/create');
 var account = require('./controllers/account');
+var error = require('./controllers/error');
 
 //  Using controllers
 app.use('/homepage', homepage);
@@ -56,9 +57,14 @@ app.use('/login', login);
 app.use('/browse', browse);
 app.use('/create', create);
 app.use('/account',account);
+app.use('/error',error);
 
 app.get('/', function(req,res) {
   res.render('homepage');
+});
+
+app.get('*', function(req, res){
+  res.render('error');
 });
 
 module.exports = app;
