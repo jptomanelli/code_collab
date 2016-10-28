@@ -1,25 +1,12 @@
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var User = require('../models').User;
+const bcrypt = require('bcrypt-nodejs');
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy;
 
-// Use local strategy to create user account
-/*
-passport.use(new LocalStrategy(
-  function(email, password, done) {
-    User.findOne({ where: { email }}).success(function(user) {
-      if (!user) {
-        done(null, false, { message: 'Unknown user' });
-      } else if (password != user.password) {
-        done(null, false, { message: 'Invalid password'});
-      } else {
-        done(null, user);
-      }
-    }).error(function(err){
-      done(err);
-    });
-  }
-));
-*/
+const User = require('../models').User;
+
+function passwordsMatch(passwordSubmitted, storedPassword) {
+  return bcrypt.compareSync(passwordSubmitted, storedPassword);
+}
 
 passport.use(new LocalStrategy({
   usernameField: 'email',
@@ -41,19 +28,24 @@ passport.use(new LocalStrategy({
   })
 );
 
-//  Serialize sessions
-passport.serializeUser(function(user,done) {
-  done(null, user.email);
+passport.serializeUser((user, done) => {
+  done(null, user.id);
 });
 
-passport.deserializeUser((email, done) => {
-  User.findById(email).then((user) => {
+passport.deserializeUser((id, done) => {
+  User.findById(id).then((user) => {
     if (user == null) {
       return done(null, false);
     }
+
     return done(null, user);
   });
 });
+/*
+passport.redirectIfLoggedIn = (route) =>
+  (req, res, next) => (req.user ? res.redirect(route) : next());
 
-
+passport.redirectIfNotLoggedIn = (route) =>
+  (req, res, next) => (req.user ? next() : res.redirect(route));
+*/
 module.exports = passport;

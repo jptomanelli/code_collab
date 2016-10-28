@@ -1,7 +1,14 @@
 'use strict';
 const Sequelize = require('sequelize');
+const bcrypt = require('bcrypt-nodejs');
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: Sequelize.INTEGER
+    },
     first_name: {
       type: Sequelize.STRING,
       allowNull: false,
@@ -27,18 +34,6 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         notEmpty: true,
         len: [3,20],
-        isUnique: function(value, next) {
-          User.find({ where: {username: value} })
-          .then(function (user) {
-            if (user && this.id !== user.id) {
-              return next('Username already in use!');
-            }
-            return next();
-          })
-          .catch(function(err) {
-            return next(err);
-          });
-        },
       },
     },
     password: {
@@ -57,20 +52,8 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
         isEmail: true,
         len: [3,25],
-        isUnique: function(value, next) {
-          User.find({ where: {email: value} })
-          .then(function (user) {
-            if (user && this.id !== user.id) {
-              return next('Email already in use!');
-            }
-            return next();
-          })
-          .catch(function(err) {
-            return next(err);
-          });
         },
       },
-    },
   }, {
     classMethods: {
       associate: function(models) {
@@ -78,5 +61,16 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+
+  User.beforeCreate((user) =>
+    new sequelize.Promise((resolve) => {
+      bcrypt.hash(user.password, null, null, (err, hashedPassword) => {
+        resolve(hashedPassword);
+      });
+    }).then((hashedPw) => {
+      user.password = hashedPw;
+    })
+  );
+
   return User;
 };
