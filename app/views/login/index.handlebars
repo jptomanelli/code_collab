@@ -1,19 +1,21 @@
-<body>
-  <div class="container-fluid">
-  <h1>login Info</h1>
+<div class="container">
+  <div class="jumbotron" id="jumbotron">
+    <h1>login Info</h1>
 
-  <!-- Login Form -->
-
-  <form action="/login" method="post">
-    <div class="form-group">
-      <label>Email</label>
-      <input type="text" class="form-control" name="email">
-    </div>
-    <div class="form-group">
-      <label>Password</label>
-      <input type="text" class="form-control" name="password">
-    </div>
-    <button type="submit" class="btn btn-warning btn-lg">Signup</button>
-  </form>
+    <!-- Login Form -->
+    {{#each error}}
+      <div class="alert alert-danger">{{this}}</div>
+    {{/each}}
+      <form name="login" action="/login" method="post">
+      <div class="form-group">
+        <label>email</label>
+        <input type="text" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="text" class="form-control" name="password">
+      </div>
+      <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+    </form>
+  </div>
 </div>
-</body>
