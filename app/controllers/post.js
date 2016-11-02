@@ -2,11 +2,11 @@
 //  This is for individual posts
 //  This page will need post data to fill
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 //  need to send to views
-router.get('/', function(req,res){
+router.get('/', (req,res) => {
   res.render('post');
 });
 
