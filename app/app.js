@@ -41,20 +41,18 @@ app.use("/public", express.static(__dirname + '/public'));
 
 //  require all controllers
 const homepage = require('./controllers/homepage')
-const post = require('./controllers/post');
+const posts = require('./controllers/posts');
 const signup = require('./controllers/signup');
 const login = require('./controllers/login');
-const browse = require('./controllers/browse');
 const create = require('./controllers/create');
 const account = require('./controllers/account');
 const error = require('./controllers/error');
 
 //  Using controllers
 app.use('/homepage', homepage);
-app.use('/post', post);
+app.use('/posts', posts);
 app.use('/signup', signup);
 app.use('/login', login);
-app.use('/browse', browse);
 app.use('/create', create);
 app.use('/account',account);
 app.use('/error',error);
