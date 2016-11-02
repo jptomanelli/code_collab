@@ -26,7 +26,51 @@ body{
    background-image:url(../images/blur.jpg);
    background-repeat: no-repeat;
    background-attachment: fixed;
+   color: black;
 }
+
+.jumbotron{
+	padding-top: 100px;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #eeeeee80;
+}
+
+.column-left{
+	float: left;
+	width: 33%;
+}
+.column-right{
+	float: right;
+	width: 33%;
+}
+.column-center{
+	display: inline-block;
+	width: 33%;
+}
+
+
+
+.login-fields{
+	width:300px;
+
+}
+/*
+.container{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	color: black;
+	background-color: #87878790;
+	padding: 0;
+	margin: 0;
+}*/
+
+footer{
+padding-left: 50%;
+	background-color: #ffffff90;
+}
+
 #languages{
    color:white;
     size:20px;
