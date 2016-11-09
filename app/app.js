@@ -7,6 +7,7 @@ const passport = require('./middlewares/auth');
 const session = require('express-session');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
+const viewHelpers = require('./middlewares/viewHelpers')
 
 const models = require('./models/');
 
@@ -38,6 +39,8 @@ app.set('view engine','handlebars');
 app.set('views', `${__dirname}/views/`);
 
 app.use("/public", express.static(__dirname + '/public'));
+
+app.use(viewHelpers.register());
 
 //  require all controllers
 const homepage = require('./controllers/homepage')
