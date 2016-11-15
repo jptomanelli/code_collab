@@ -1,16 +1,17 @@
-var exphbs = require('express-handlebars');
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-var passport = require('./middlewares/auth');
-var session = require('express-session');
-var flash = require('connect-flash');
+const passport = require('./middlewares/auth');
+const session = require('express-session');
+const flash = require('connect-flash');
 const methodOverride = require('method-override');
+const viewHelpers = require('./middlewares/viewHelpers')
 
-var models = require('./models/');
+const models = require('./models/');
 
-var app = express();
+const app = express();
 
 app.use(methodOverride('_method'));
 
@@ -39,26 +40,32 @@ app.set('views', `${__dirname}/views/`);
 
 app.use("/public", express.static(__dirname + '/public'));
 
+app.use(viewHelpers.register());
+
 //  require all controllers
-var homepage = require('./controllers/homepage')
-var post = require('./controllers/post');
-var signup = require('./controllers/signup');
-var login = require('./controllers/login');
-var browse = require('./controllers/browse');
-var create = require('./controllers/create');
-var account = require('./controllers/account');
+const homepage = require('./controllers/homepage')
+const posts = require('./controllers/posts');
+const signup = require('./controllers/signup');
+const login = require('./controllers/login');
+const create = require('./controllers/create');
+const account = require('./controllers/account');
+const error = require('./controllers/error');
 
 //  Using controllers
 app.use('/homepage', homepage);
-app.use('/post', post);
+app.use('/posts', posts);
 app.use('/signup', signup);
 app.use('/login', login);
-app.use('/browse', browse);
 app.use('/create', create);
 app.use('/account',account);
+app.use('/error',error);
 
-app.get('/', function(req,res) {
+app.get('/', (req,res) => {
   res.render('homepage');
+});
+
+app.get('*', (req, res) => {
+  res.render('error');
 });
 
 module.exports = app;
