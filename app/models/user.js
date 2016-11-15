@@ -1,6 +1,7 @@
 'use strict';
 const Sequelize = require('sequelize');
 const bcrypt = require('bcrypt-nodejs');
+const isUnique = require('../middlewares/unique');
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
     id: {
@@ -34,6 +35,7 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         notEmpty: true,
         len: [3,20],
+        isUnique: isUnique("User", "username"),
       },
     },
     password: {
@@ -52,6 +54,7 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
         isEmail: true,
         len: [3,25],
+        isUnique: isUnique("User", "email"),
         },
       },
   }, {

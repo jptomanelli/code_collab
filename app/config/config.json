@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
    "development": {
     "username": "codecollab",
     "password": "dev",
+=======
+  "development": {
+    "username": "pg_user",
+    "password": "pg_user",
+>>>>>>> Structure
     "database": "codecollab_development",
     "host": "localhost",
     "dialect": "postgres"
