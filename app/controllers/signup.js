@@ -18,8 +18,8 @@ router.post('/', (req, res) => {
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-  }).then((User) => {
-      res.redirect('/login')
+  }).then(function(User) {
+      res.redirect('/account')
   }).catch((e) => {
     res.redirect('/signup');
     //  Error prints to console
