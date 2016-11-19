@@ -24,6 +24,9 @@ body{
    background-image:url(../images/blur.jpg);
    background-repeat: no-repeat;
    background-attachment: fixed;
+<<<<<<< HEAD
+}
+=======
    color: black;
 }
 
@@ -69,6 +72,7 @@ padding-left: 50%;
 	background-color: #ffffff90;
 }
 
+>>>>>>> Structure
 #languages{
    color:white;
     size:20px;
