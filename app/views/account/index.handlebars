@@ -1,33 +1,13 @@
 <div class="container">
   <div class="jumbotron" id="jumbotron">
     <h1>Account Info</h1>
-    <form name="create-user" action="/signup" method="post">
-      <div class="form-group">
-        <label>First Name</label>
-        <input type="text" class="form-control" name="first_name" placeholder={{user.first_name}} required>
-        <p class="help-block text-danger"></p>
-      </div>
-      <div class="form-group">
-        <label>Last Name</label>
-        <input type="text" class="form-control" name="last_name" placeholder={{user.last_name}} required>
-        <p class="help-block text-danger"></p>
-      </div>
-      <div class="form-group">
-        <label>Username</label>
-        <input type="text" class="form-control" name="username" placeholder={{user.username}} required>
-        <p class="help-block text-danger"></p>
-      </div>
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" class="form-control" name="password" placeholder={{user.password}} required>
-        <p class="help-block text-danger"></p>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="text" class="form-control" name="email" placeholder={{user.email}} required>
-        <p class="help-block text-danger"></p>
-      </div>
-      <button type="submit" class="btn btn-warning btn-lg">Edit</button>
-    </form>
+    <h4>First Name</h4>
+    <p>{{user.first_name}}</p>
+    <h4>Last Name</h4>
+    <p>{{user.last_name}}</p>
+    <h4>Username</h4>
+    <p>{{user.username}}</p>
+    <h4>Email</h4>
+    <p>{{email.username}}</p>
   </div>
 </div>
