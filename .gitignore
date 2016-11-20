@@ -2,5 +2,5 @@
 node_modules
 npm-debug.log
 *.handlebars
-
-app/views/account/index.handlebars
+.DS_store
+/migrations/*
