@@ -1,6 +1,17 @@
 <div class="container">
-  <div class="jumbotron" id="jumbotron">
-    <h1>Recent Projects</h1>
-      <p>Recent projects shall go here!</p>
-  </div>
+    <div class="jumbotron" id="jumbotron">
+        <h1>Recent Projects</h1>
+        {{#each posts}}
+            <div class="post-prev">
+                <a href="/posts/{{this.title}}">
+                    <h3> {{this.title}} </h3>
+                </a>
+                <p><b> Link</b>: {{this.link}} </p>
+                <p><b> Language</b>: {{this.language}} </p>
+                <p><b> Description</b>: {{this.description}} </p>
+                <p><b> Created at</b>: {{this.createdAt}}</p>
+                <p><b> Last updated at</b>: {{this.updatedAt}}</p>
+            </div>
+        {{/each}}
+    </div>
 </div>

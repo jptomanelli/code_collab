@@ -18,24 +18,30 @@ app.use(methodOverride('_method'));
 
 //  handlebars
 app.engine('handlebars', exphbs({
-   layoutsDir: './views/layouts',
-   defaultLayout: 'main'
+    layoutsDir: './views/layouts',
+    defaultLayout: 'main'
 }));
 
 //cook
 app.use(cookieParser());
 //  Body Parser
-app.use(bodyParser. urlencoded({ extended: true }));
-app.use(bodyParser. json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
 //  Session & passport
-app.use(session(({ secret: 'Secret', resave: false, saveUninitialized: true })));
+app.use(session(({
+    secret: 'Secret',
+    resave: false,
+    saveUninitialized: true
+})));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static('./public'));
 
 
-app.set('view engine','handlebars');
+app.set('view engine', 'handlebars');
 app.set('views', `${__dirname}/views/`);
 
 app.use("/public", express.static(__dirname + '/public'));
@@ -57,15 +63,15 @@ app.use('/posts', posts);
 app.use('/signup', signup);
 app.use('/login', login);
 app.use('/create', create);
-app.use('/account',account);
-app.use('/error',error);
+app.use('/account', account);
+app.use('/error', error);
 
-app.get('/', (req,res) => {
-  res.render('homepage');
+app.get('/', (req, res) => {
+    res.render('homepage');
 });
 
 app.get('*', (req, res) => {
-  res.render('error');
+    res.render('error');
 });
 
 module.exports = app;
