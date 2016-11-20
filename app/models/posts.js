@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        this.belongsTo(models.User, {foreignKey: 'id'});
+        //this.belongsTo(models.User, {foreignKey: 'owner_id'});
       }
     }
   });
