@@ -14,8 +14,14 @@ router.get('/', (req,res) => {
   });
 });
 
-router.get('/:title', (req, res) => {
-  res.send('Title: ' + req.params.title);
+router.get('/:title', (req,res) => {
+  models.Posts.findOne({
+    where: {
+      title: req.params.title,
+    },
+  }).then((post) => {
+    res.render('posts/post', { post });
+  });
 });
 
 module.exports = router;

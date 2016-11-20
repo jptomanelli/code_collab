@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="../public/css/post.css">
+<div class="container">
+    <div class="jumbotron" id="jumbotron">
+        {{#if post}}
+            <h1>{{post.title}}</h1>
+            <div class="post-prev">
+                <p><b> Link</b>: {{post.link}} </p>
+                <p><b> Language</b>: {{post.language}} </p>
+                <p><b> Description</b>: {{post.description}} </p>
+                <p><b> Created at</b>: {{post.createdAt}}</p>
+                <p><b> Last updated at</b>: {{post.updatedAt}}</p>
+            </div>
+        {{/if}}
+        <a href="/posts" type="button" class="btn btn-default" aria-label="Left Align">
+          <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
