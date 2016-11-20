@@ -4,3 +4,4 @@ npm-debug.log
 *.handlebars
 .DS_store
 /migrations/*
+/config/config.json
