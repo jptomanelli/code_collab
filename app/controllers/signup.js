@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
     email: req.body.email,
     password: req.body.password,
   }).then(function(User) {
-      res.redirect('/account')
+      res.redirect('/login')
   }).catch((e) => {
     res.redirect('/signup');
     //  Error prints to console
