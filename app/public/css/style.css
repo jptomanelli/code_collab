@@ -11,6 +11,20 @@ h2{
     width:400px;
     height:400px;
 }
+
+.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(//user dependent image//) no-repeat;
+	}
+
+.circular img {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	}
 #profilePic{
     padding-top: 100;
 }
