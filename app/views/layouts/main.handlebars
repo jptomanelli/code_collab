@@ -20,9 +20,9 @@
 <!-- NavBar and Properties -->
 <div class="navbar navbar-inverse navbar-fixed-top">
 
-    <form class="navbar-form navbar-left" name="login_info" id="login_info" role="login">
+    <form class="navbar-form navbar-left" name="login_info" id="login_info" role="login" action="/login" method="post">
         <div class="form-group">
-            <input type="text" class="form-control" onsubmit="return validateForm();" id="user_name" name="username" placeholder="Username" method="post" required>
+            <input type="text" class="form-control" onsubmit="return validateForm();" id="user_name" name="email" placeholder="email" method="post" required>
         </div>
         <div class="form-group">
             <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>

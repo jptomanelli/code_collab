@@ -1,7 +1,7 @@
 'use strict';
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  var Posts = sequelize.define('Posts', {
+  var Post = sequelize.define('Post', {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
       type: Sequelize.STRING,
     },
     language: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
     },
     description: {
       type: Sequelize.TEXT,
@@ -31,9 +31,9 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        //this.belongsTo(models.User, {foreignKey: 'owner_id'});
+        models.Post.belongsTo(models.User);
       }
     }
   });
-  return Posts;
+  return Post;
 };
