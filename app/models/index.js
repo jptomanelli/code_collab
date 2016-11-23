@@ -31,6 +31,15 @@ Object.keys(db).forEach(function(modelName) {
 });
 
 db.sequelize = sequelize;
-sequelize.sync().then(function() {
+sequelize.sync({force: true}).then(function() {
+
+  db.User.create({
+    username: "Tester1",
+    email: "test@test.com",
+    password: "Test123",
+    first_name: "Test",
+    last_name: "Testers",
+  })
+
 });
 module.exports = db;
