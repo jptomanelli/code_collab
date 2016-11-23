@@ -9,19 +9,30 @@ const router = express.Router();
 
 //  need to send to views
 router.get('/', (req,res) => {
-  models.Posts.findAll().then((posts) => {
+  models.Post.findAll().then((posts) => {
     res.render('posts', {posts});
   });
 });
 
 router.get('/:title', (req,res) => {
-  models.Posts.findOne({
+  models.Post.findOne({
     where: {
       title: req.params.title,
     },
   }).then((post) => {
-    res.render('posts/post', { post });
+    post.getUser().then( (user) => {
+      res.render('posts/post', { post: post, user: user });
+      console.log(JSON.stringify(user));
+    });
   });
 });
+/*
+router.post('/:title/comment', (req,res) => {
+  models.Comment.create({
 
+  }).then((comment) => {
+    res.render('posts/post', {post: post, user: user });
+  });
+};
+*/
 module.exports = router;
