@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', (req,res) => {
   res.render('homepage');
 });
-
+/*
 function validateForm() {
     if (document.form) {
      	alert("EKEK");
@@ -14,5 +14,5 @@ function validateForm() {
 		alert("Script not working! Abort!");
 	}
 }
-
+*/
 module.exports = router;
