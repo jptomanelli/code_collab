@@ -40,7 +40,7 @@
                 </ul>
                 <ul class="navbar navbar-nav navbar-right">
                     <button type="button" class="btn btn-default navbar-btn" id="logout">logout</button>
-                    <p class="navbar-text">Welcome, <a href="#" class="navbar-link"><b>{{cur_user.first_name}}</b></a></p>
+                    <p class="navbar-text">Welcome, <a href="/account" class="navbar-link"><b>{{cur_user.first_name}}</b></a></p>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -59,8 +59,8 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="navbar navbar-nav navbar-right">
-                    <a href="/signup"><button type="button"class="btn btn-default navbar-btn" id="signup">signup</button></a>
                     <a href="/login"><button type="button"class="btn btn-default navbar-btn" id="login">login</button></a>
+                    <a href="/signup"><button type="button"class="btn btn-default navbar-btn" id="signup">signup</button></a>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -76,18 +76,5 @@
         <p class="text-muted"></p>
     </div>
 </footer>
-
-{{#if cur_user}}
-    <script>
-        ;
-        (function() {
-            $('#logout').click(function() {
-                $.post("/logout", function() {
-                    window.location.href = '/';
-                });
-            });
-        })();
-    </script>
-{{/if}}
 
 </html>
