@@ -23,7 +23,11 @@ router.get('/:title', (req,res) => {
     post.getUser().then( (user) => {
       res.render('posts/post', { post: post, user: user });
       console.log(JSON.stringify(user));
+    }).catch(() => {
+      res.render('error');
     });
+  }).catch(() => {
+    res.render('error');
   });
 });
 /*
