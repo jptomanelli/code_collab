@@ -1,23 +1,14 @@
 'use strict';
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define('Post', {
+  var Comment = sequelize.define('Comment', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    title: {
-      type: Sequelize.STRING,
-    },
-    link: {
-      type: Sequelize.STRING,
-    },
-    language: {
-      type: Sequelize.STRING,
-    },
-    description: {
+    text: {
       type: Sequelize.TEXT,
     },
     createdAt: {
@@ -31,10 +22,9 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        models.Post.belongsTo(models.User);
-        models.Post.hasMany(models.Comment);
+        models.Comment.belongsTo(models.Post);
       }
     }
   });
-  return Post;
+  return Comment;
 };

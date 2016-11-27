@@ -30,13 +30,35 @@ router.get('/:title', (req,res) => {
     res.render('error');
   });
 });
+
 /*
+router.get('/:title/:comment', (req,res) => {
+  models.Comment.findOne({
+    where: {
+      text: req.body.comment,
+    },
+  }).then((comment) => {
+    res.render('/:title/comment', {comment: comment});
+    console.log(comment);
+  });
+});
+
+
 router.post('/:title/comment', (req,res) => {
   models.Comment.create({
-
-  }).then((comment) => {
-    res.render('posts/post', {post: post, user: user });
-  });
-};
+    //PostId: req.post.id,
+    text: req.body.comment,
+  }).then(function(comment) {
+    comment.getPost().then((post) => {
+      res.render('posts/post', {post:post});
+    }).catch(() => {
+      res.render('error');
+    });
+  }).catch((e) => {
+    res.redirect('/');
+    //  Print error
+    console.log(e);
+  })
+});
 */
 module.exports = router;
