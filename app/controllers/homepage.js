@@ -1,18 +1,16 @@
 
 const express = require('express');
 const router = express.Router();
+const models = require('../models');
 
 router.get('/', (req,res) => {
   res.render('homepage');
 });
 /*
-function validateForm() {
-    if (document.form) {
-     	alert("EKEK");
-     	return false;
-	}else{
-		alert("Script not working! Abort!");
-	}
-}
+router.get('/', (req,res) => {
+  models.Post.findAll().then((posts) => {
+    res.render('homepage', {posts});
+  });
+});
 */
 module.exports = router;
