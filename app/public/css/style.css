@@ -1,6 +1,8 @@
 p {
-    color:white;
-    text-align: center;
+  color: black;
+}
+h4 {
+  color: black;
 }
 h2{
     color:#FFFFFF;
@@ -42,14 +44,12 @@ body{
    background-attachment: fixed;
    color: black;
 }
-
 .jumbotron{
 	padding-top: 100px;
 	padding-left: 10%;
 	padding-right: 10%;
 	background-color: #eeeeee80;
 }
-
 .column-left{
 	float: left;
 	width: 33%;
@@ -62,12 +62,8 @@ body{
 	display: inline-block;
 	width: 33%;
 }
-
-
-
 .login-fields{
 	width:300px;
-
 }
 /*
 .container{
@@ -79,12 +75,10 @@ body{
 	padding: 0;
 	margin: 0;
 }*/
-
 footer{
 padding-left: 50%;
 	background-color: #ffffff90;
 }
-
 #languages{
    color:white;
     size:20px;
@@ -94,10 +88,6 @@ padding-left: 50%;
 }
 .navbar{
     margin:0px;
-}
-h4{
-    color:#FFFFFF;
-    text-align: center;
 }
 hr {
 display: block;

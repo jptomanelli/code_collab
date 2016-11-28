@@ -1,34 +1,20 @@
+<link rel="stylesheet" type="text/css" href="../public/css/account.css">
 <div class="container">
-  <div class="jumbotron" id="jumbotron">
-    <h1>Account Info</h1>
-      <div class="circular-img">
-       
-          <img src=" USER ID goes here"/>
-      </div>
-      <center>
-        <li>
-      
-     <ul></ul>  
-            <ul>
-            </ul>
-            
-            <ul>
-             <button type="button" class="btn btn-default" id="changeProfile">1</button>
-            </ul>
-            
-            <ul>
-              <button type="button" class="btn btn-default" id="changeEmail">Change Email</button>
-            </ul>
-            
-            <ul>
-              <button type="button" class="btn btn-default" id="changePass">Change Password</button>
-            </ul>
-      
-      
-      
-        </li>
-      </center>      
-      
-      <p>Info</p>
-  </div>
+    <div class="jumbotron" id="jumbotron">
+        <center><h1>Account Info</h1></center>
+            <center><div class="image-circular">  <img src="http://pitchfork.com/features/cover-story/reader/daft-punk/images/pq1v2.jpg"/></div></center>
+            <!-- Maybe add user ProfilePic ID to db - Use preset pictures? -->
+             <h4>First Name</h4>
+             <p>{{user.first_name}}</p>
+             <br>
+             <h4>Last Name</h4>
+             <p>{{user.last_name}}</p>
+             <br>
+             <h4>Username</h4>
+             <p>{{user.username}}</p>
+             <br>
+             <h4>Email</h4>
+             <p>{{email.username}}</p>
+    </div>
+
 </div>

@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var passport = require('../middlewares/auth');
+const express = require('express');
+const router = express.Router();
+const passport = require('../middlewares/auth');
 
-router.get('/', function(req,res){
+router.get('/', (req,res) => {
   res.render('login', { error: req.flash('error') });
 });
 
