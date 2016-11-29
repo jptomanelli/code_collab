@@ -10,13 +10,14 @@ router.get('/', (req,res) => {
 });
 
 router.post('/', (req,res) => {
-  models.Posts.create({
+  models.Post.create({
+    UserId: req.user.id,
     title: req.body.title,
     link: req.body.link,
     language:req.body.lang,
     description:req.body.desc,
-  }).then(function(Posts) {
-    res.redirect(`/posts/${Posts.title}`);
+  }).then(function(post) {
+    res.redirect(`/posts/${post.title}`);
   }).catch((e) => {
     res.redirect('/');
     //  Print error

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <link rel="stylesheet" href="../../public/vendor/font-awesome/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
@@ -20,39 +21,60 @@
 <!-- NavBar and Properties -->
 <div class="navbar navbar-inverse navbar-fixed-top">
 
-    <form class="navbar-form navbar-left" name="login_info" id="login_info" role="login">
-        <div class="form-group">
-            <input type="text" class="form-control" onsubmit="return validateForm();" id="user_name" name="username" placeholder="Username" method="post" required>
+    {{#if cur_user}}
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="/homepage">Code_Collab</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/account">Account</a></li>
+                    <li><a href="/posts">Browse</a></li>
+                    <li><a href="/create">Create</a></li>
+                </ul>
+                <ul class="navbar navbar-nav navbar-right">
+                    <button type="button" class="btn btn-default navbar-btn" id="logout">logout</button>
+                    <p class="navbar-text">Welcome, <a href="/account" class="navbar-link"><b>{{cur_user.first_name}}</b></a></p>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div class="form-group">
-            <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
-        </div>
-        <button type="submit" onClick="validateForm()" class="btn btn-default">Login</button>
-    </form>
+    {{else}}
 
-
-    <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search Projects">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="/homepage">Code_Collab</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar navbar-nav navbar-right">
+                    <a href="/login"><button type="button"class="btn btn-default navbar-btn" id="login">login</button></a>
+                    <a href="/signup"><button type="button"class="btn btn-default navbar-btn" id="signup">signup</button></a>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+
+    {{/if}}
 </div>
 {{{ body }}}
 
-<!-- CODE FOR LOGOUT ONCE BUTTON IS ADDED
-{{#if cur_user}}
-    <script>
-        ;
-        (function() {
-            $('#logout').click(function() {
-                $.post("/logout", function() {
-                    window.location.href = '/';
-                });
-            });
-        })();
-    </script>
-{{/if}}
--->
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted"></p>
+    </div>
+</footer>
 
 </html>

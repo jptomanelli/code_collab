@@ -1,7 +1,7 @@
 .vagrant
 node_modules
 npm-debug.log
-*.handlebars
 .DS_store
 /migrations/*
 /config/config.json
+app/node_modules/*

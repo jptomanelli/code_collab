@@ -60,7 +60,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        //this.hasMany(models.Posts, {foreignKey: 'id'});
+        models.User.hasMany(models.Post);
       }
     }
   });
