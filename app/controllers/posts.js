@@ -14,6 +14,18 @@ router.get('/', (req,res) => {
   });
 });
 
+router.get('/lang/:language', (req,res) => {
+  models.Post.findAll({
+    where: {
+      language : req.params.language
+    },
+  }).then((posts) => {
+    res.render('posts/lang/language', {posts});
+  }).catch(() => {
+    res.render('error');
+  })
+});
+
 router.get('/:title', (req,res) => {
   models.Post.findOne({
     where: {
