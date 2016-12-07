@@ -3,6 +3,7 @@
     <div class="jumbotron" id="jumbotron">
         <!-- START of Form -->
         <div id="entire_form">
+            {{#if cur_user}}
             <form class="form-horizontal" name="project_form" id="project_form" action="/create" method="post">
                 <!-- Form Name -->
                 <h1>Project Information</h1>
@@ -26,7 +27,7 @@
                     <label class="col-md-4 control-label">Languages used</label>
                     <div class="col-md-4">
                         <select id="lang" name="lang" class="form-control">
-                      <option name="c++">C++</option>
+                      <option name="cplusplus">C++</option>
                       <option name="html">HTML</option>
                       <option name="javascript">Javascript</option>
                       <option name="java">Java</option>
@@ -40,7 +41,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label">Project Description</label>
                     <div class="col-md-4">
-                        <textarea class="form-control" id="desc" name="desc">Tell us about your project!</textarea>
+                        <textarea class="form-control" id="desc" name="desc" placeholder="Tell us about your project!"></textarea>
                     </div>
                     <div class="col-md-4">
                         <button type="submit" id="post_button" class="btn btn-default">Submit</button>
@@ -48,5 +49,8 @@
                 </div>
             </form>
         </div>
+        {{else}}
+          <h3>Sorry you need to login first to create a post...</h3>
+        {{/if}}
     </div>
 </div>
