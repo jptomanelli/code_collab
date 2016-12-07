@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req,res) => {
-  req.logout();
-  res.redirect('/');
+router.post('/', (req, res) => {
+  req.session.destroy( () => {
+    res.redirect('/homepage');
+    console.log("it worked!");
+  }).catch( (err) => {
+    console.log(err);
+  })
 });
-
-return router;
+module.exports = router;
