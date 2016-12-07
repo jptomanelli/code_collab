@@ -56,6 +56,7 @@ const login = require('./controllers/login');
 const create = require('./controllers/create');
 const account = require('./controllers/account');
 const error = require('./controllers/error');
+const logout = require('./controllers/logout');
 
 //  Using controllers
 app.use('/homepage', homepage);
@@ -65,6 +66,7 @@ app.use('/login', login);
 app.use('/create', create);
 app.use('/account', account);
 app.use('/error', error);
+app.use('/logout', logout);
 
 app.get('/', (req, res) => {
     res.render('homepage');
