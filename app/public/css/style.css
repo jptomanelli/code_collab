@@ -4,9 +4,12 @@ p {
 h4 {
   color: black;
 }
-h2{
-    color:#FFFFFF;
-    text-align:center;
+h1 {
+  text-align: center;
+}
+
+.error_body p {
+  text-align: center;
 }
 .circular--square{
     border-radius: 50%;
@@ -29,6 +32,9 @@ h2{
 	}
 #profilePic{
     padding-top: 100;
+}
+.navbar-brand p {
+  color: white;
 }
 li{
     color:#FFFFFF;
@@ -88,6 +94,10 @@ padding-left: 50%;
 }
 .navbar{
     margin:0px;
+}
+.navbar-right button{
+  margin-left:10px;
+  margin-right:10px;
 }
 hr {
 display: block;
