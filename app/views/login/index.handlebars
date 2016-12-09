@@ -1,6 +1,8 @@
 <link rel="stylesheet" type="text/css" href="../public/css/login.css">
 <div class="container">
     <div class="jumbotron" id="jumbotron">
+      {{#if cur_user}}
+      {{else}}
         <h1>login Info</h1>
 
         <!-- Login Form -->
@@ -20,5 +22,6 @@
             </div>
             <button type="submit" class="btn btn-warning btn-lg">Signup</button>
         </form>
+        {{/if}}
     </div>
 </div>

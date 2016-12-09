@@ -7,3 +7,9 @@ npm-debug.log
 /config/config.json
 
 app/controllers/browse.js
+
+app/views/layouts/main.handlebars
+
+app/controllers/posts.js
+
+app/views/create/index.handlebars

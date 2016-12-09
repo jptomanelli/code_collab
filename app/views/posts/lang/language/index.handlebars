@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="jumbotron" id="jumbotron">
+        <h1>Recent Projects</h1>
+        <div class="container">
+          <ul>
+            <button><a href="/posts/">All</a></button>
+            <button><a href="/posts/lang/C++">C++</a></button>
+            <button><a href="/posts/lang/HTML">HTML</a></button>
+            <button><a href="/posts/lang/Javascript">Javascript</a></button>
+            <button><a href="/posts/lang/Java">Java</a></button>
+            <button><a href="/posts/lang/CSS">CSS</a></button>
+            <button><a href="/posts/lang/Objective C">Objective C</a></button>
+            <button><a href="/posts/lang/Perl">Perl</a></button>
+          </ul>
+        </div>
+        {{#if posts}}
+            {{#each posts}}
+                <div class="post-prev well well-sm">
+                    <a href="/posts/{{this.title}}">
+                        <h3> {{this.title}} </h3>
+                    </a>
+                    <p><b> Link</b>: {{this.link}} </p>
+                    <p><b> Language</b>: {{this.language}} </p>
+                    <p><b> Description</b>: {{this.description}} </p>
+                    <!--
+                    <p><b> Created at</b>: {{this.createdAt}}</p>
+                    <p><b> Last updated at</b>: {{this.updatedAt}}</p>
+                  -->
+                </div>
+            {{/each}}
+        {{else}}
+            <p class="center">Looks like there's nothing here!</p>
+        {{/if}}
+    </div>
+</div>
