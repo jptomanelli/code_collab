@@ -11,6 +11,9 @@ router.get('/', (req,res) => {
 });
 
 router.post('/', (req,res) => {
+/*
+  Need to have old user deleted when this happens???
+*/
   models.User.find({where:{id:user.id}})
   .then((User) => {
     User.updateAttributes({

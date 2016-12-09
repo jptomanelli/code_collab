@@ -9,8 +9,14 @@
     <!-- Scripts and Sheets -->
     <link rel="stylesheet" href="../../public/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<<<<<<< HEAD
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+=======
     <link rel="stylesheet" href="../../public/vendor/font-awesome/css/font-awesome.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+>>>>>>> Structure
     <!-- End of Scripts and Sheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,6 +24,11 @@
 <!-- NavBar and Properties -->
 <div class="navbar navbar-inverse navbar-fixed-top">
 
+<<<<<<< HEAD
+    <form class="navbar-form navbar-left" name="login_info" id="login_info" role="login">
+        <div class="form-group">
+            <input type="text" class="form-control" onsubmit="return validateForm();" id="user_name" name="username" placeholder="Username" method="post" required>
+=======
     {{#if cur_user}}
         <div class="container">
             <div class="navbar-header">
@@ -41,38 +52,38 @@
                 </ul>
             </div>
             <!--/.nav-collapse -->
+>>>>>>> Structure
         </div>
-    {{else}}
-
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-                <a class="navbar-brand" href="/homepage">Code_Collab</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="navbar navbar-nav navbar-right">
-                    <a href="/login"><button type="button"class="btn btn-default navbar-btn" id="login">login</button></a>
-                    <a href="/signup"><button type="button"class="btn btn-default navbar-btn" id="signup">signup</button></a>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
+        <div class="form-group">
+            <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
         </div>
+        <button type="submit" onClick="validateForm()" class="btn btn-default">Login</button>
+    </form>
 
-    {{/if}}
+
+    <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search Projects">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 </div>
 {{{ body }}}
 
-
-<footer class="footer">
-    <div class="container">
-        <p class="text-muted"></p>
-    </div>
-</footer>
+<!-- CODE FOR LOGOUT ONCE BUTTON IS ADDED
+{{#if cur_user}}
+    <script>
+        ;
+        (function() {
+            $('#logout').click(function() {
+                $.post("/logout", function() {
+                    window.location.href = '/';
+                });
+            });
+        })();
+    </script>
+{{/if}}
+-->
 
 {{#if cur_user}}
 <script>

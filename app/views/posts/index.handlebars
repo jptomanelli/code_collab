@@ -2,32 +2,17 @@
 <div class="container">
     <div class="jumbotron" id="jumbotron">
         <h1>Recent Projects</h1>
-        <hr>
-        <div class="container">
-          <ul class="list-group">
-            <button><a href="/posts/">All</a></button>
-            <button><a href="/posts/lang/c++">C++</button>
-            <button><a href="/posts/lang/html">HTML</button>
-            <button><a href="/posts/lang/javascipt">Javascipt</button>
-            <button><a href="/posts/lang/java">Java</button>
-            <button><a href="/posts/lang/ccss">CSS</button>
-            <button><a href="/posts/lang/objectivec">objectivec</button>
-            <button><a href="/posts/lang/perl">Perl</button>
-          </ul>
-        </div>
         {{#if posts}}
             {{#each posts}}
-                <div class="post-prev well well-sm">
+                <div class="post-prev">
                     <a href="/posts/{{this.title}}">
                         <h3> {{this.title}} </h3>
                     </a>
                     <p><b> Link</b>: {{this.link}} </p>
                     <p><b> Language</b>: {{this.language}} </p>
                     <p><b> Description</b>: {{this.description}} </p>
-                    <!--
                     <p><b> Created at</b>: {{this.createdAt}}</p>
                     <p><b> Last updated at</b>: {{this.updatedAt}}</p>
-                  -->
                 </div>
             {{/each}}
         {{else}}

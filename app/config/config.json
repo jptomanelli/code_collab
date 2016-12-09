@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "pg_user",
-    "password": "pg_user",
-    "database": "codecollab_development",
+    "username": "postgres",
+    "password": "null",
+    "database": "postgres",
     "host": "localhost",
     "dialect": "postgres"
   },
