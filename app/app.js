@@ -67,10 +67,7 @@ app.use('/create', create);
 app.use('/account', account);
 app.use('/error', error);
 app.use('/logout', logout);
-
-app.get('/', (req, res) => {
-    res.render('homepage');
-});
+app.use('/',homepage)
 
 app.get('*', (req, res) => {
     res.render('error');
