@@ -6,13 +6,18 @@
         <div class="container">
           <ul class="list-group">
             <button><a href="/posts/">All</a></button>
-            <button><a href="/posts/lang/c++">C++</button>
-            <button><a href="/posts/lang/html">HTML</button>
-            <button><a href="/posts/lang/javascipt">Javascipt</button>
-            <button><a href="/posts/lang/java">Java</button>
-            <button><a href="/posts/lang/ccss">CSS</button>
-            <button><a href="/posts/lang/objectivec">objectivec</button>
-            <button><a href="/posts/lang/perl">Perl</button>
+            <button><a href="/posts/lang/V++">C++</button>
+            <button><a href="/posts/lang/HTML">HTML</button>
+            <button><a href="/posts/lang/Javascript">Javascript</button>
+            <button><a href="/posts/lang/Java">Java</button>
+            <button><a href="/posts/lang/Objective C">Objective C</button>
+            <button><a href="/posts/lang/Perl">Perl</button>
+            <button><a href="/posts/lang/Python">Python</button>
+          </ul>
+          <ul class="list-group">
+            <button><a href="/posts/level/Beginner">Beginner</button>
+            <button><a href="/posts/level/Intermediate">Intermediate</button>
+            <button><a href="/posts/level/Advanced">Advanced</button>
           </ul>
         </div>
         {{#if posts}}
@@ -23,6 +28,8 @@
                     </a>
                     <p><b> Link</b>: {{this.link}} </p>
                     <p><b> Language</b>: {{this.language}} </p>
+                    <p><b> Skill</b>: {{this.skill}} </p>
+
                     <p><b> Description</b>: {{this.description}} </p>
                     <!--
                     <p><b> Created at</b>: {{this.createdAt}}</p>

@@ -20,6 +20,9 @@ module.exports = function(sequelize, DataTypes) {
     description: {
       type: Sequelize.TEXT,
     },
+    skill: {
+      type: Sequelize.STRING,
+    },
     createdAt: {
       allowNull: false,
       type: Sequelize.DATE,

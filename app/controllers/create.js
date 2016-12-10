@@ -15,6 +15,7 @@ router.post('/', (req,res) => {
     title: req.body.title,
     link: req.body.link,
     language:req.body.lang,
+    skill:req.body.skill,
     description:req.body.desc,
   }).then(function(post) {
     res.redirect(`/posts/${post.title}`);

@@ -14,6 +14,18 @@ router.get('/', (req,res) => {
   });
 });
 
+router.get('/level/:skill', (req,res) => {
+  models.Post.findAll({
+    where: {
+      skill : req.params.skill
+    },
+  }).then((posts) => {
+    res.render('posts/level/skill', {posts});
+  }).catch(() => {
+    res.render('error');
+  })
+});
+
 router.get('/lang/:language', (req,res) => {
   models.Post.findAll({
     where: {
