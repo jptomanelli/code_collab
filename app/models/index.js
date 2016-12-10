@@ -50,14 +50,14 @@ sequelize.sync({
         last_name: "Tomanelli",
     }),
     db.Post.create({
-        title: "android-design-template",
+        title: "Android-design-template",
         description: "This is a State of the Art Android Material Design template. You can use this project as a template for upcoming App projects. Just clone the project, change package name and make all necessary cus… ",
         link : "https://github.com/rodriguez10100/",
         language : "Java",
         skill : "Intermediate",
     }),
     db.Post.create({
-        title: "pixi.js",
+        title: "Pixi.js",
         description: "The aim of this project is to provide a fast lightweight 2D library that works across all devices. The Pixi renderer allows everyone to enjoy the power of hardware acceleration without prior knowledge of WebGL. Also, it's fast. Really fast.",
         link : "https://github.com/pixijs/pixi.js",
         language : "Javascript",
@@ -69,6 +69,13 @@ sequelize.sync({
         link : "https://github.com/scrapy/scrapy",
         language : "Python",
         skill : "Advanced",
+    }),
+    db.Post.create({
+        title: "Fake ATM",
+        description: "I'm a freshman looking to create an ATM program to get a better understanding of OOP and pointers within C++. After the class is build I would like to create a running application with a GUI using QT.",
+        link : "https://github.com/amaclean199/ATM-App",
+        language : "C++",
+        skill : "Beginner",
     })
 
 });
