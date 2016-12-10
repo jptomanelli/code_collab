@@ -39,8 +39,36 @@ sequelize.sync({
         username: "testuser1",
         email: "test@test.com",
         password: "Test123",
-        first_name: "John",
+        first_name: "Joe",
         last_name: "Doe",
+    }),
+    db.User.create({
+        username: "jptomanelli",
+        email: "jptomanelli@gmail.com",
+        password: "password",
+        first_name: "John",
+        last_name: "Tomanelli",
+    }),
+    db.Post.create({
+        title: "android-design-template",
+        description: "This is a State of the Art Android Material Design template. You can use this project as a template for upcoming App projects. Just clone the project, change package name and make all necessary cus… ",
+        link : "https://github.com/rodriguez10100/",
+        language : "Java",
+        skill : "Intermediate",
+    }),
+    db.Post.create({
+        title: "pixi.js",
+        description: "The aim of this project is to provide a fast lightweight 2D library that works across all devices. The Pixi renderer allows everyone to enjoy the power of hardware acceleration without prior knowledge of WebGL. Also, it's fast. Really fast.",
+        link : "https://github.com/pixijs/pixi.js",
+        language : "Javascript",
+        skill : "Advanced",
+    }),
+    db.Post.create({
+        title: "Scrapy",
+        description: "Scrapy is a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their pages. It can be used for a wide range of purposes, from data mining to monitoring and automated testing.",
+        link : "https://github.com/scrapy/scrapy",
+        language : "Python",
+        skill : "Advanced",
     })
 
 });
