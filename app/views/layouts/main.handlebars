@@ -7,10 +7,12 @@
     </title>
 
     <!-- Scripts and Sheets -->
+    <!-- Latest compiled and minified CSS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../public/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
     <link rel="stylesheet" href="../../public/vendor/font-awesome/css/font-awesome.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <!-- End of Scripts and Sheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -67,11 +69,11 @@
 </div>
 {{{ body }}}
 
-
 <footer class="footer">
-    <div class="container">
-        <p class="text-muted"></p>
-    </div>
+    <div class="footer">
+          © 2016 Code_Collab.
+          <a href="https://github.com/rodriguez10100/code_collab" class="w3-hover-text-gray"><i class="fa fa-github" style="font-size:20px"></i></a>
+      </div>
 </footer>
 
 {{#if cur_user}}
@@ -83,6 +85,9 @@
       });
     });
   })();
+  $(document).ready(function(){
+$(".dropdown-toggle").dropdown();
+});
 </script>
 {{/if}}
 
