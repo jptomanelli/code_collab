@@ -4,17 +4,16 @@ const router = express.Router();
 const models = require('../models');
 const passport = require('passport');
 
-
 router.get('/', (req,res) => {
-  res.render('homepage');
-});
-/*
-router.get('/', (req,res) => {
-  models.Post.findAll().then((posts) => {
+  models.Post.findAll({
+    limit: 3,
+  }).then((posts) => {
     res.render('homepage', {posts});
+  }).catch((err) => {
+    res.render('homepage');
+    console.log(err);
   });
 });
-*/
 
 router.post('/', (req,res) => {
     req.logout();

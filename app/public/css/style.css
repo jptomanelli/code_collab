@@ -34,7 +34,7 @@ ul{
     margin:0 auto;
 }
 body{
-   background-image:url(../images/blur.jpg);
+   background-image:url(../images/code.png);
    background-repeat: no-repeat;
    background-attachment: fixed;
    color: black;
@@ -71,8 +71,17 @@ body{
 	margin: 0;
 }*/
 footer{
-padding-left: 50%;
 	background-color: #ffffff90;
+  text-align: center;
+  color:white;
+  background-color: rgba(0,0,0,0.5);
+  padding: 0.5em;
+}
+.btn-remove{
+visibility: hidden;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
 }
 #languages{
    color:white;

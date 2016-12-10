@@ -1,24 +1,73 @@
-<div class="container">
-    <div class="jumbotron" id="jumbotron">
-        <h1>Welcome!</h1>
-        <p>This is the homepage...</p>
-        <div class="row">
-            <h3>Some of our most recent projects</h1>
-      <div class="col-md-4">
-        <h2><a href="#" role="button">Title goes here »</a></h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2><a href="#" role="button">Title goes here »</a></h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2><a href="#" role="button">Title goes here »</a></h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+<link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+<link rel="stylesheet" type="text/css" href="../../public/css/devices.css">
+<header class="header">
+  <div class="container-lrg flex">
+    <div class="col-6 centervertical">
+      <h1 class="heading">
+        Where all are welcome to create together
+      </h1>
+      <h2 class="paragraph ">
+        Code_Collab is a virtual space where students and developers can find and share open source projects to work on with each other. No matter how much experience you have, there is a project that you can join in on!
+      </h2>
+    </div>
+    <div class="col-6 sidedevices">
+      <div class="computerwrapper">
+        <div class="computer">
+          <div class="mask">
+            <img class="mask-img" src="../../public/images/pc.png">
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</header>
+<div class="feature3">
+  <div class="container-lrg flex jumbotron">
+    {{#if posts}}
+    {{#each posts}}
+    <div class="col-4">
+      <h3 class="subheading">
+        {{this.title}}
+      </h3>
+      <p class="paragraph">
+        {{this.description}}
+      </p>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="col-4">
+    <b class="emoji">
+      🎓
+    </b>
+      <h3 class="subheading">
+        Brilliant Domain Names.
+      </h3>
+      <p class="paragraph">
+        Launchaco instantly shows you the most relevant domain names. Followed by hundreds of new gtlds. Get your .gold domain name today!
+      </p>
+    </div>
+    <div class="col-4">
+      <b class="emoji">
+        💐
+      </b>
+      <h3 class="subheading">
+        Instant Handles
+      </h3>
+      <p class="paragraph">
+        Naming your brand has never been soooo easy! With Launchaco you can instantly search for twitter, facebook, medium, and instagram handles.
+      </p>
+    </div>
+    <div class="col-4">
+      <b class="emoji">
+        🚀
+      </b>
+      <h3 class="subheading">
+        Gorgeous Logotypes
+      </h3>
+      <p class="paragraph">
+        We've hand travelled the depths of the internet to bring you gorgeous logotypes. Featuring the beautiful fonts of Connary Fagen.
+      </p>
+    </div>
+    {{/if}}
   </div>
 </div>
