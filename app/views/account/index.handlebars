@@ -1,15 +1,21 @@
 <link rel="stylesheet" type="text/css" href="../public/css/account.css">
 <div class="container">
     <div class="jumbotron" id="jumbotron">
-        <h1>Account Info</h1>
-        <h4>First Name</h4>
-        <p>{{user.first_name}}</p>
-        <h4>Last Name</h4>
-        <p>{{user.last_name}}</p>
-        <h4>Username</h4>
-        <p>{{user.username}}</p>
-        <h4>Email</h4>
-        <p>{{user.email}}</p>
+        {{#if cur_user}}
+            <h1>Account Info</h1>
+            <h4>First Name</h4>
+            <p>{{user.first_name}}</p>
+            <h4>Last Name</h4>
+            <p>{{user.last_name}}</p>
+            <h4>Username</h4>
+            <p>{{user.username}}</p>
+            <h4>Email</h4>
+            <p>{{user.email}}</p>
+        {{else}}
 
-    </div>
+            <h1><i class="fa fa-frown-o" aria-hidden="true"></i></h1>
+            <br>
+            <p style="text-align:center;">You must logout first!</p>
+    {{/if}}
+        </div>
 </div>
