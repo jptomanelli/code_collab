@@ -22,7 +22,7 @@
         </div>
         {{#if posts}}
             {{#each posts}}
-                <div class="post-prev well well-sm">
+                <div class="post-prev">
                     <a href="/posts/{{this.title}}">
                         <h3> {{this.title}} </h3>
                     </a>
@@ -31,10 +31,8 @@
                     <p><b> Skill</b>: {{this.skill}} </p>
 
                     <p><b> Description</b>: {{this.description}} </p>
-                    <!--
                     <p><b> Created at</b>: {{this.createdAt}}</p>
                     <p><b> Last updated at</b>: {{this.updatedAt}}</p>
-                  -->
                 </div>
             {{/each}}
         {{else}}

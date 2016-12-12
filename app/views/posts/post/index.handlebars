@@ -4,14 +4,13 @@
             <h1>{{post.title}}</h1>
             <div class="post_prev">
                 <h3 id="post_owner">{{user.username}}</h3>
-                <p id="post_link"><a href="{{post.link}}" target="_blank">{{post.link}} </a></p>
+                <p id="post_link"><a href="{{post.link}}">{{post.link}} </a></p>
                 <p>{{post.description}} </p>
                 <p><b> Language</b>: {{post.language}} </p>
                 <p><b> Skill</b>: {{post.skill}} </p>
                 <p><b> Created at</b>: {{post.createdAt}}</p>
                 <p><b> Last updated at</b>: {{post.updatedAt}}</p>
             </div>
-            <!--
             <form name="comment" action="/posts/{{post.title}}/comment" method="post" class="form-group">
                 <label class="col-md-4 control-label">Comment</label>
                 <div class="col-md-4">
@@ -31,7 +30,6 @@
                 {{else}}
                 <p>No comments</p>
                 {{/if}}
-          -->
             <a href="/posts" type="button" class="btn btn-default" aria-label="Left Align">
                 <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
             </a>

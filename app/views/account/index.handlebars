@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../public/css/account.css">
 <div class="container">
+  <!--
     <div class="jumbotron" id="jumbotron">
         {{#if cur_user}}
             <h1>Account Info</h1>
@@ -18,6 +19,51 @@
             <h1><i class="fa fa-frown-o" aria-hidden="true"></i></h1>
             <br>
             <p style="text-align:center;">You must login first!</p>
+-->
+    <div class="jumbotron container" id="jumbotron" on>
+        <div class="container">
+            <center><div class="page-header"><h2>Account <small>View your account information.</small></h2></div></center>
+
+            <hr>
+            <center><div class="image-circular">  <img src="http://pitchfork.com/features/cover-story/reader/daft-punk/images/pq1v2.jpg"/></div></center>
+             <br>
+             <br>
+            <!-- Maybe add user ProfilePic ID to db - Use preset pictures? -->
+            <form>
+                    <!-- First and Last can't be edited upon account creation -->
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">First name</label>
+                         <div class="col-sm-10">
+                             <p class="form-control-static mb-0">{{user.first_name}}</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Last name</label>
+                        <div class="col-sm-10">
+                           <p class="form-control-static mb-0">{{user.last_name}}</p>
+                         </div>
+                    </div>
+
+            <!--End of First + Last-->
+
+            <!-- UserName -->
+                 <!-- TODO : Add Top / Bot textfield - receiving data from database -->
+                   <div class="form-group row">
+                      <label class='col-md-2 col-form-label'>Username</label>
+                            <div class="col-sm-10">
+                              <p class="form-control-static mb-0">{{user.username}}</p>
+                            </div>
+                    </div>
+              <!-- Email -->
+                   <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                               <p class="form-control-static mb-0">{{user.email}}</p>
+                            </div>
+                   </div>
+            </form>
+>>>>>>> Structure
         </div>
 </div>
 <div class="space"></div>
