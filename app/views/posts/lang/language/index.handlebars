@@ -1,16 +1,22 @@
+<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
 <div class="container">
     <div class="jumbotron" id="jumbotron">
         <h1>Recent Projects</h1>
         <div class="container">
-          <ul>
+          <ul class="list-group">
             <button><a href="/posts/">All</a></button>
-            <button><a href="/posts/lang/C++">C++</a></button>
-            <button><a href="/posts/lang/HTML">HTML</a></button>
-            <button><a href="/posts/lang/Javascript">Javascript</a></button>
-            <button><a href="/posts/lang/Java">Java</a></button>
-            <button><a href="/posts/lang/CSS">CSS</a></button>
-            <button><a href="/posts/lang/Objective C">Objective C</a></button>
-            <button><a href="/posts/lang/Perl">Perl</a></button>
+            <button><a href="/posts/lang/V++">C++</button>
+            <button><a href="/posts/lang/HTML">HTML</button>
+            <button><a href="/posts/lang/Javascript">Javascript</button>
+            <button><a href="/posts/lang/Java">Java</button>
+            <button><a href="/posts/lang/Objective C">Objective C</button>
+            <button><a href="/posts/lang/Perl">Perl</button>
+            <button><a href="/posts/lang/Python">Python</button>
+          </ul>
+          <ul class="list-group">
+            <button><a href="/posts/level/Beginner">Beginner</button>
+            <button><a href="/posts/level/Intermediate">Intermediate</button>
+              <button><a href="/posts/level/Advanced">Advanced</button>
           </ul>
         </div>
         {{#if posts}}
@@ -21,6 +27,7 @@
                     </a>
                     <p><b> Link</b>: {{this.link}} </p>
                     <p><b> Language</b>: {{this.language}} </p>
+                    <p><b> Skill</b>: {{this.skill}} </p>
                     <p><b> Description</b>: {{this.description}} </p>
                     <!--
                     <p><b> Created at</b>: {{this.createdAt}}</p>
@@ -33,3 +40,4 @@
         {{/if}}
     </div>
 </div>
+<div class="space"></div>

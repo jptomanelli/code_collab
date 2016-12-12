@@ -67,15 +67,12 @@ app.use('/create', create);
 app.use('/account', account);
 app.use('/error', error);
 app.use('/logout', logout);
-
-app.get('/', (req, res) => {
-    res.render('homepage');
-});
+app.use('/',homepage)
 
 app.get('*', (req, res) => {
     res.render('error');
 });
 
 module.exports = app;
-app.listen(8001);
+app.listen(8000);
 console.log("Server up on localhost:8000");

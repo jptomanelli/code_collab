@@ -1,15 +1,7 @@
 .vagrant
 node_modules
 npm-debug.log
-*.handlebars
 .DS_store
 /migrations/*
 /config/config.json
-
-app/controllers/browse.js
-
-app/views/layouts/main.handlebars
-
-app/controllers/posts.js
-
-app/views/create/index.handlebars
+app/node_modules/*

@@ -1,6 +1,11 @@
 <link rel="stylesheet" type="text/css" href="../public/css/signup.css">
 <div class="container">
     <div class="jumbotron" id="jumbotron">
+      {{#if cur_user}}
+      <h1><i class="fa fa-frown-o" aria-hidden="true"></i></h1>
+      <br>
+      <p style="text-align:center;">You must logout first!</p>
+      {{else}}
         <h1>Signup</h1>
         <!-- Signup Form -->
         <form name="create-user" action="/signup" method="post">
@@ -26,5 +31,6 @@
             </div>
             <button type="submit" class="btn btn-warning btn-lg">Signup</button>
         </form>
+        {{/if}}
     </div>
 </div>

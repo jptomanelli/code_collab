@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="../public/css/post.css">
 <div class="container">
     <div class="jumbotron" id="jumbotron">
         {{#if post}}
@@ -8,6 +7,7 @@
                 <p id="post_link"><a href="{{post.link}}">{{post.link}} </a></p>
                 <p>{{post.description}} </p>
                 <p><b> Language</b>: {{post.language}} </p>
+                <p><b> Skill</b>: {{post.skill}} </p>
                 <p><b> Created at</b>: {{post.createdAt}}</p>
                 <p><b> Last updated at</b>: {{post.updatedAt}}</p>
             </div>
@@ -20,6 +20,87 @@
                     <button type="submit" method="post" id="post_button" class="btn btn-default pull-right">Submit</button>
                 </div>
             </form>
+            <br>
+            {{#if comment}}
+                {{#each comment}}
+                    <div class="post-prev">
+                      <p>{{comment.text}}</p>
+                    </div>
+                {{/each}}
+                {{else}}
+                <p>No comments</p>
+                {{/if}}
+            <a href="/posts" type="button" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+            </a>
+          <hr>
+          <div class="container">
+
+  <div class="post-comments">
+    <form>
+      <div class="form-group">
+        <label for="comment">Your Comment</label>
+        <textarea name="comment" class="form-control" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Send</button>
+    </form>
+
+    <div class="comments-nav">
+      <ul class="nav nav-pills">
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  there is 1 comment <span class="caret"></span>
+                </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">First</a></li>
+            <li><a href="#">Last</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="media">
+        <div class="media-heading">
+          <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">2</span> jptomanelli 12 hours ago
+        </div>
+        <div class="panel-collapse collapse in" id="collapseOne">
+          <div class="media-left">
+            <div class="vote-wrap">
+              <div class="save-post">
+                <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
+              </div>
+              <div class="vote up">
+                <i class="glyphicon glyphicon-menu-up"></i>
+              </div>
+              <div class="vote inactive">
+                <i class="glyphicon glyphicon-menu-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <p>Wow, cool project! I'd love to contribute if you're still looking for help?? </p>
+            <div class="comment-meta">
+              <span><a href="#">report</a></span>
+              <span><a href="#">hide</a></span>
+              <span>
+                  <a class="" role="button" data-toggle="collapse" href="#replyCommentT" aria-expanded="false" aria-controls="collapseExample">reply</a>
+              </span>
+              <div class="collapse" id="replyCommentT">
+                <form>
+                  <div class="form-group">
+                    <label for="comment">Your Comment</label>
+                    <textarea name="comment" class="form-control" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-default">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
         {{/if}}
     </div>
 </div>
