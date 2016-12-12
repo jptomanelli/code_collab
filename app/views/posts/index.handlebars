@@ -6,7 +6,7 @@
         <div class="container">
           <ul class="list-group">
             <button><a href="/posts/">All</a></button>
-            <button><a href="/posts/lang/V++">C++</button>
+            <button><a href="/posts/lang/C++">C++</button>
             <button><a href="/posts/lang/HTML">HTML</button>
             <button><a href="/posts/lang/Javascript">Javascript</button>
             <button><a href="/posts/lang/Java">Java</button>
@@ -22,7 +22,7 @@
         </div>
         {{#if posts}}
             {{#each posts}}
-                <div class="post-prev">
+                <div class="post-prev well well-sm">
                     <a href="/posts/{{this.title}}">
                         <h3> {{this.title}} </h3>
                     </a>
@@ -31,8 +31,10 @@
                     <p><b> Skill</b>: {{this.skill}} </p>
 
                     <p><b> Description</b>: {{this.description}} </p>
+                    <!--
                     <p><b> Created at</b>: {{this.createdAt}}</p>
                     <p><b> Last updated at</b>: {{this.updatedAt}}</p>
+                  -->
                 </div>
             {{/each}}
         {{else}}
