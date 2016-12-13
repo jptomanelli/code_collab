@@ -5,19 +5,20 @@
         <hr>
         <div class="container">
           <ul class="list-group">
-            <button><a href="/posts/">All</a></button>
-            <button><a href="/posts/lang/C++">C++</button>
-            <button><a href="/posts/lang/HTML">HTML</button>
-            <button><a href="/posts/lang/Javascript">Javascript</button>
-            <button><a href="/posts/lang/Java">Java</button>
-            <button><a href="/posts/lang/Objective C">Objective C</button>
-            <button><a href="/posts/lang/Perl">Perl</button>
-            <button><a href="/posts/lang/Python">Python</button>
+
+            <a href="/posts/" class= "btn btn-default">All</a>
+          <a href="/posts/lang/C++" class= "btn btn-default">C++</a>
+          <a href="/posts/lang/HTML" class= "btn btn-default">HTML</a>
+        <a href="/posts/lang/Javascript" class= "btn btn-default">Javascript</a>
+        <a href="/posts/lang/Java" class= "btn btn-default">Java</a>
+        <a href="/posts/lang/Objective C" class="btn btn-default">Objective  C</a>
+        <a href="/posts/lang/Perl" class= "btn btn-default">Perl</a>
+          <a href="/posts/lang/Python" class= "btn btn-default">Python</a>
           </ul>
           <ul class="list-group">
-            <button><a href="/posts/level/Beginner">Beginner</button>
-            <button><a href="/posts/level/Intermediate">Intermediate</button>
-            <button><a href="/posts/level/Advanced">Advanced</button>
+            <a href="/posts/level/Beginner" class= "btn btn-default">Beginner</a>
+            <a href="/posts/level/Intermediate" class= "btn btn-default">Intermediate</a>
+            <a href="/posts/level/Advanced" class= "btn btn-default">Advanced</a>
           </ul>
         </div>
         {{#if posts}}
@@ -26,7 +27,7 @@
                     <a href="/posts/{{this.title}}">
                         <h3> {{this.title}} </h3>
                     </a>
-                    <p><b> Link</b>: {{this.link}} </p>
+                    <p><b> Link</b>: <a href="{{this.link}}">{{this.link}}</a> </p>
                     <p><b> Language</b>: {{this.language}} </p>
                     <p><b> Skill</b>: {{this.skill}} </p>
 

@@ -4,3 +4,9 @@ body {
 .center p {
   text-align: center;
 }
+.posts{
+  background-color: black;
+}
+.btn{
+  color: #337ab7;
+}

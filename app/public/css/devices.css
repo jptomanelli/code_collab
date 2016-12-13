@@ -11,8 +11,8 @@
 	display: block;
 }
 .sidedevices .computerwrapper .computer {
-	width: 800px;
-	height: 520px;
+	width: auto;
+	/*height: 520px;*/
 	background: linear-gradient(to bottom, rgba(247,251,254,1) 0%,rgba(221,226,232,1) 100%);
 	border-radius: 18px;
 	position: relative;
